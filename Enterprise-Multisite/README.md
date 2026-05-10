@@ -63,16 +63,3 @@ Packet Tracer over 2 days.
 | NAT | kube-proxy |
 | VPN | mTLS/service mesh |
 
-## Coming Next
-- [ ] OSPF dynamic routing
-- [ ] IPSec VPN tunneling
-- [ ] VLAN segmentation
-- [ ] Attack simulation (Region 3)
-- [ ] Security hardening (Region 4)
-- [ ] Compliance agent integration
-
-## Files
-- `Star.pkt` — Packet Tracer file
-- `topology/` — Screenshots
-- `configs/` — Device configurations
-- `docs/` — IP scheme and notes
