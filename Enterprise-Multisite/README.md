@@ -5,7 +5,7 @@ built from scratch in Cisco
 Packet Tracer over 2 days.
 
 ## Architecture Overview
-![Topology](topology/screenshot.png)
+![Topology](screenshot.png)
 
 ## What's Built
 
