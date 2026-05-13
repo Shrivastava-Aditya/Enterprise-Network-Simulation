@@ -6,7 +6,7 @@
 ---
 
 ## Community Recognition
-
+![Reddit Stats](Reddit_stats.png)
 ```
 Platform:      r/PacketTracer
 Ranking:       #1 All-Time Top Post
