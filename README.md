@@ -1,7 +1,7 @@
 # Enterprise Network Simulation
 
 > Built from scratch in Cisco Packet Tracer over 48 hours —
-> **Ranked #1 all-time on r/PacketTracer** with 100% upvote ratio and 79+ shares.
+> **Ranked #1 all-time on r/PacketTracer** with 100% upvote ratio (140+) and 95+ shares.
 
 ---
 
