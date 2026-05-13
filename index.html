@@ -312,7 +312,7 @@
       <span class="tag tag-purple">ISO 27001</span>
     </div>
 
-    <h1>Building a <em>Production-Grade</em> Enterprise Network from Scratch —<br>and Watching Reddit Lose Its Mind</h1>
+    <h1>A <em>Production-Grade</em> Two-Region Enterprise WAN —<br>Built from Scratch in 48 Hours</h1>
 
     <div class="hero-meta">
       <span>Aditya Shrivastava</span>
@@ -323,13 +323,13 @@
     </div>
 
     <p class="hero-lead">
-      I am a DevOps engineer who decided to go back to networking fundamentals.
-      Over 48 hours, I built a complete two-region enterprise WAN entirely from scratch in Cisco Packet Tracer —
-      dual ASA firewalls, GRE tunnel, OSPF dynamic routing, 802.1q VLANs, DHCP, DNS, HTTP, NTP, and port security.
-      I solved 15 production-class bugs along the way.
-      Then I posted it on Reddit, went to sleep, and woke up to find it had become the
-      <strong>#1 all-time post on r/PacketTracer</strong> overnight.
-      This is the complete write-up.
+      A complete two-region enterprise WAN built entirely from first principles in Cisco Packet Tracer —
+      dual ASA firewalls with security zones, GRE tunnel, OSPF dynamic routing, 802.1q VLAN segmentation,
+      ISO 27001-mapped security controls, and a full services stack across both regions.
+      15 production-class bugs were found, diagnosed, and fixed.
+      When posted to Reddit, the architecture was validated unanimously by network engineers across three continents —
+      earning the <strong>#1 all-time post on r/PacketTracer</strong> overnight.
+      This is the full technical write-up.
     </p>
 
     <div class="stats-strip">
@@ -343,28 +343,27 @@
 
   <article>
 
-    <!-- WHY -->
+    <!-- OVERVIEW -->
     <section>
-      <h2><span class="h2-icon">01</span> Why I Built This</h2>
+      <h2><span class="h2-icon">01</span> The Design Brief</h2>
       <p>
-        Most of my work lives above the network layer. Pipelines, containers, Kubernetes, cloud infrastructure —
-        all of it assumes the network just works. I realised I had been taking that assumption for granted for years.
-        I could not tell you, off the top of my head, why a packet dropped at a firewall or what OSPF actually
-        advertises when two routers first see each other. That bothered me.
+        The goal was a topology that mirrors how a real enterprise WAN is architected — not a simplified lab
+        exercise, but something with the full stack of controls that infrastructure teams actually run in production.
+        Two geographically separate regions, each with its own security perimeter, edge routing, internal
+        switching fabric, and services infrastructure, connected over a simulated WAN through a dedicated
+        GRE tunnel.
       </p>
       <p>
-        I decided to fix the gap the only way that actually sticks: build something real, break it, and debug it
-        until it works. Not a tutorial. Not a guided lab. A blank canvas and a production-grade target.
+        Every design decision was made with two constraints in mind: <strong>resilience</strong> and
+        <strong>security</strong>. Resilience means the network continues to function correctly when topology
+        changes — which is why static routing was replaced with OSPF. Security means traffic is segmented,
+        perimeter-enforced, and every control maps to a justification — which is why VLANs, ASA security
+        zones, ACLs, port security, and NAT are all present and documented against ISO 27001 clauses.
       </p>
       <p>
-        The target was a two-region enterprise network — a headquarters site and a branch office — connected over
-        a simulated WAN, with proper perimeter security, dynamic routing, VLAN segmentation, and full service
-        infrastructure in both regions. I gave myself 48 hours.
-      </p>
-      <p>
-        I chose Cisco Packet Tracer because it simulates layer-2 and layer-3 behaviour faithfully enough to
-        surface real bugs. When a packet does not route, you have to actually figure out why — there is no
-        auto-complete for that.
+        Cisco Packet Tracer was chosen because it simulates layer-2 and layer-3 behaviour with enough
+        fidelity to surface real production bugs. Every failure in this build — all 15 of them — is
+        the kind of failure that happens on physical hardware.
       </p>
     </section>
 
@@ -840,13 +839,10 @@
 
     <!-- REDDIT -->
     <section>
-      <h2><span class="h2-icon">10</span> The Reddit Moment</h2>
+      <h2><span class="h2-icon">10</span> Community Validation</h2>
       <p>
-        After 48 hours I had a working network, 15 bugs debugged, and a topology screenshot that
-        looked like something out of a Cisco design guide. I decided to post it.
-      </p>
-      <p>
-        The title I chose was almost deliberately understated:
+        The topology was posted to <strong>r/PacketTracer</strong> with a single screenshot and a
+        straightforward title:
       </p>
 
       <div class="pull-quote">
@@ -855,20 +851,17 @@
       </div>
 
       <p>
-        I posted it, closed my laptop, and went to sleep. By the time I woke up, something had happened
-        that I genuinely did not expect. The post had been shared 95 times. The upvote ratio was sitting
-        at 100%. And it had climbed to the <strong>#1 all-time top post</strong> on r/PacketTracer.
+        By the next morning it had been shared 95 times, held a 100% upvote ratio, and climbed to the
+        <strong>#1 all-time top post</strong> on the subreddit. What made that significant was not the
+        numbers — it was <em>who</em> was responding. Working network engineers, CCNA candidates, and
+        infrastructure architects across the United States, India, and Germany shared it through
+        professional study groups and forums.
       </p>
       <p>
-        What struck me most was <em>who</em> was responding. Not just students — working network engineers,
-        CCNA candidates studying for their exams, infrastructure architects at companies. People from the
-        United States, India, and Germany were sharing it across study groups and professional forums.
-        Network professionals who build real enterprise infrastructure for a living looked at this and
-        said it was the real thing.
-      </p>
-      <p>
-        That validation — unanimous, unsolicited, from people who know exactly what they are looking at —
-        is what I am most proud of.
+        People who build and operate real enterprise infrastructure recognised this architecture as
+        production-correct. That is the most meaningful measure of whether the design decisions —
+        the security zones, the VLAN segmentation, the OSPF over static, the GRE tunnel, the
+        ISO 27001 mapping — were the right ones.
       </p>
 
       <div class="reddit-card">
