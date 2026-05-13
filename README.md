@@ -7,9 +7,6 @@
 
 ## Community Recognition
 
-![Reddit Stats](<img width="668" height="679" alt="image" src="https://github.com/user-attachments/assets/2d4bc0d4-3e14-4b0e-ac8a-cb35c5d60f7a" />)
-
-
 ```
 Platform:      r/PacketTracer
 Ranking:       #1 All-Time Top Post
